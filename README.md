@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Waze Gabon Club
 
-## Getting Started
+La premiere communaute Waze du Gabon.
 
-First, run the development server:
+## Stack technique
+
+- Next.js 15 + React 19 (App Router, SSR/SSG)
+- PWA installable
+- Heberge sur Vercel (gratuit)
+- Bilingue FR/EN (259 cles par langue)
+- 14 feature flags pour le rollout progressif
+- SEO : metadata SSR, Open Graph, Twitter Cards
+
+## Demarrage local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# → http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build production
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm run start
+# → http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Debug
 
-## Learn More
+Ajouter `?debug=flags` a l'URL pour voir l'etat des feature flags.
 
-To learn more about Next.js, take a look at the following resources:
+## Documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Tous les documents du projet sont dans `/docs/` :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Document | Contenu |
+|----------|---------|
+| 00_PROJECT_SUMMARY.md | Vision, personas, scope, KPIs |
+| 01_RISK_MATRIX.md | 14 risques identifies |
+| 02_CONSTRAINTS.md | Contraintes techniques, budget, humaines |
+| 03_ENVIRONMENTS.md | Environnements, Git strategy, conventions |
+| 04_INITIAL_ARCHITECTURE_PROPOSAL.md | Architecture initiale |
+| 05_ARCHITECTURE_DEFINITION.md | Architecture detaillee |
+| 06_SECURITY_MODEL.md | Modele de menaces (15 threats) |
+| 07_DATA_FLOW.md | Flux de donnees et services tiers |
+| 08_FEATURE_FLAGS.md | 14 flags, 4 waves de rollout |
+| 09_DEPLOYMENT_GUIDE.md | Guide Vercel complet |
+| 10_ROLLOUT_PLAN.md | Etat des flags et waves |
+| 11_ROLLBACK_PLAN.md | Procedures de recuperation |
 
-## Deploy on Vercel
+## Feature flags
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Les sections du site sont controlees par des feature flags dans `lib/flags.js`.
+Voir `docs/08_FEATURE_FLAGS.md` pour le detail.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Communaute
+
+- WhatsApp : (lien a configurer)
+- Telegram : t.me/wazeGabon
+- Facebook : facebook.com/WazeGabonClub
+
+## Licence
+
+Initiative communautaire. Waze est une marque de Google LLC.
