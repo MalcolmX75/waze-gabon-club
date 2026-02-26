@@ -57,8 +57,8 @@ Voir `docs/08_FEATURE_FLAGS.md` pour le detail.
 
 ## Communaute
 
-- WhatsApp : (lien a configurer)
-- Telegram : t.me/wazeGabon
+- WhatsApp : chat.whatsapp.com/CxqQfJ2DI8rJFGRx583YS5
+- Telegram : t.me/+terR7LTLdk9jMDk0
 - Facebook : facebook.com/WazeGabonClub
 
 ## Licence
