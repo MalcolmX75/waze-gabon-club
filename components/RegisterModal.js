@@ -5,6 +5,7 @@ import { useTranslation } from '@/lib/i18n';
 import C from '@/lib/colors';
 import { CONFIG } from '@/lib/config';
 import { externalLinkProps } from '@/utils/externalLink';
+import { registerAction } from '@/app/actions/register';
 import { validateForm, checkHoneypot, canSubmit, markSubmitted } from '@/utils/form';
 
 export default function RegisterModal({ show, onClose }) {
@@ -29,12 +30,8 @@ export default function RegisterModal({ show, onClose }) {
     setFormStatus('submitting');
     setFormErrors({});
     try {
-      const res = await fetch(CONFIG.form.endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ ...sanitized, _gotcha: honeypot }),
-      });
-      if (res.ok) {
+      const result = await registerAction({ ...sanitized, _gotcha: honeypot });
+      if (result.ok) {
         markSubmitted();
         setRegistered(true);
         setFormStatus('success');
