@@ -14,6 +14,7 @@ import FAQ from '@/components/FAQ';
 import Privacy from '@/components/Privacy';
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import InstallPWA from '@/components/InstallPWA';
 import RegisterModal from '@/components/RegisterModal';
 import DebugPanel from '@/components/DebugPanel';
 
@@ -34,6 +35,7 @@ export default function HomePage() {
       {FLAGS.privacySection && <Privacy />}
       {FLAGS.footer && <Footer />}
       {FLAGS.floatingWhatsapp && <FloatingWhatsApp />}
+      <InstallPWA />
       {FLAGS.registerModal && <RegisterModal show={showRegister} onClose={() => setShowRegister(false)} />}
       <DebugPanel />
     </div>

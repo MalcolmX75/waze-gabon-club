@@ -123,11 +123,28 @@ body {
 }
 .input-field:focus { border-color: #33CCFF; }
 
+/* PWA Install Button */
+.pwa-install-btn:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(51,204,255,.4); }
+.pwa-install-btn:active { transform: scale(0.95); }
+
 /* Responsive */
 @media (max-width: 768px) {
   .hide-mobile { display: none !important; }
   .show-mobile { display: flex !important; }
   .livemap-grid { grid-template-columns: 1fr !important; }
+
+  /* Mobile-friendly sections */
+  section { padding-left: 16px !important; padding-right: 16px !important; }
+  .waze-btn { font-size: 14px; padding: 12px 20px; }
+
+  /* Floating buttons - stack vertically on mobile */
+  .pwa-install-btn { bottom: 92px !important; right: 16px !important; width: 50px !important; height: 50px !important; font-size: 20px !important; }
+
+  /* Cards grid - single column on small screens */
+  .card-lift { margin-bottom: 0; }
+}
+@media (max-width: 480px) {
+  .waze-btn { width: 100%; justify-content: center; font-size: 14px; }
 }
 @media (min-width: 769px) {
   .show-mobile { display: none !important; }
