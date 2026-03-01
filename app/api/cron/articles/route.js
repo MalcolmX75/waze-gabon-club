@@ -2,8 +2,7 @@ import { query } from '@/lib/db';
 import { publishArticle } from '@/lib/publish';
 
 const RSS_URLS = [
-  'https://news.google.com/rss/search?q=waze+new+features+OR+waze+update&hl=en&gl=US&ceid=US:en',
-  'https://news.google.com/rss/search?q=waze+nouveaut%C3%A9s+OR+waze+mise+%C3%A0+jour&hl=fr&gl=FR&ceid=FR:fr',
+  'https://news.google.com/rss/search?q=waze+nouveaut%C3%A9s+OR+waze+mise+%C3%A0+jour+OR+waze+update&hl=fr&gl=FR&ceid=FR:fr',
 ];
 
 export async function GET(request) {
