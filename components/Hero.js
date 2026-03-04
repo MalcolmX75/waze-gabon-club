@@ -81,13 +81,13 @@ export default function Hero() {
             background: 'rgba(255,255,255,.1)', color: '#fff', border: '1px solid rgba(255,255,255,.2)',
             fontSize: 15, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', gap: 8,
           }}>
-            {'\u{25B6}\u{FE0F}'} Android
+            {'\u{25B6}\u{FE0F}'} Play Store
           </a>
           <a href={CONFIG.waze.appStoreUrl} {...externalLinkProps} className="waze-btn" style={{
             background: 'rgba(255,255,255,.1)', color: '#fff', border: '1px solid rgba(255,255,255,.2)',
             fontSize: 15, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', gap: 8,
           }}>
-            {'\u{1F34F}'} iOS
+            {'\u{1F34F}'} App Store
           </a>
         </div>
 
