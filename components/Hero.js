@@ -76,6 +76,21 @@ export default function Hero() {
           </a>
         </div>
 
+        <div className="anim-up-3" style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap', marginTop: 24 }}>
+          <a href={CONFIG.waze.playStoreUrl} {...externalLinkProps} className="waze-btn" style={{
+            background: 'rgba(255,255,255,.1)', color: '#fff', border: '1px solid rgba(255,255,255,.2)',
+            fontSize: 15, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', gap: 8,
+          }}>
+            {'\u{25B6}\u{FE0F}'} Android
+          </a>
+          <a href={CONFIG.waze.appStoreUrl} {...externalLinkProps} className="waze-btn" style={{
+            background: 'rgba(255,255,255,.1)', color: '#fff', border: '1px solid rgba(255,255,255,.2)',
+            fontSize: 15, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', gap: 8,
+          }}>
+            {'\u{1F34F}'} iOS
+          </a>
+        </div>
+
         <div className="anim-up-3" style={{ display: 'flex', gap: 48, justifyContent: 'center', marginTop: 64, flexWrap: 'wrap' }}>
           {HERO_STATS.map((s, i) => (
             <div key={i} style={{ textAlign: 'center' }}>

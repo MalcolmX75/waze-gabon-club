@@ -52,10 +52,10 @@ export default function Articles() {
                   }}>{a.tag}</span>
                 </div>
                 <h3 className="heading" style={{ fontSize: 17, fontWeight: 700, marginBottom: 10, lineHeight: 1.4 }}>
-                  {a.title}
+                  {stripHTML(a.title)}
                 </h3>
                 <p style={{ color: C.muted, fontSize: 14, lineHeight: 1.7, flex: 1 }}>
-                  {a.description}
+                  {stripHTML(a.description)}
                 </p>
                 <div style={{ marginTop: 16, fontSize: 13, color: C.waze, fontWeight: 600 }}>
                   {t('articles.readMore')} {'\u2192'}
@@ -125,4 +125,17 @@ function formatDate(dateStr) {
   if (!dateStr) return '';
   const d = new Date(dateStr);
   return d.toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' });
+}
+
+function stripHTML(str) {
+  if (!str) return '';
+  return str
+    .replace(/<[^>]+>/g, '')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, ' ')
+    .trim();
 }
