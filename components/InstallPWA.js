@@ -57,15 +57,15 @@ export default function InstallPWA() {
         aria-label={t('pwa.install')}
         style={{
           position: 'fixed', bottom: 96, right: 24,
-          width: 56, height: 56, borderRadius: '50%',
+          borderRadius: 28, padding: '12px 20px',
           background: `linear-gradient(135deg, ${C.waze}, ${C.blue})`,
           color: '#fff', border: 'none', cursor: 'pointer',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          display: 'flex', alignItems: 'center', gap: 8,
           boxShadow: `0 6px 24px ${C.waze}50`, zIndex: 998,
-          fontSize: 24,
+          fontSize: 14, fontWeight: 700, fontFamily: "'DM Sans', sans-serif",
           transition: 'transform .3s ease, box-shadow .3s ease',
         }}>
-        {'\u{1F4F2}'}
+        {'\u{1F4F2}'} {t('pwa.install')}
       </button>
 
       {/* Install Modal */}
