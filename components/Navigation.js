@@ -38,12 +38,7 @@ export default function Navigation({ onOpenRegister }) {
         transition: 'all .3s ease',
       }}>
         <a href="#home" onClick={scrollTo('home')} style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
-          <div style={{
-            width: 42, height: 42, borderRadius: 12,
-            background: `linear-gradient(135deg, ${C.waze}, ${C.green})`,
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            color: '#fff', fontWeight: 900, fontSize: 20, fontFamily: "'Outfit', sans-serif",
-          }}>W</div>
+          <img src="/logo.svg" alt="Waze Gabon Club" width={42} height={42} style={{ borderRadius: 12 }} />
           <div>
             <div className="heading" style={{ fontWeight: 800, fontSize: 17, lineHeight: 1.1, color: scrollY > 50 ? C.text : '#fff' }}>
               Waze Gabon
