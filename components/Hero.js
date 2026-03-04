@@ -76,18 +76,12 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="anim-up-3" style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap', marginTop: 24 }}>
-          <a href={CONFIG.waze.playStoreUrl} {...externalLinkProps} className="waze-btn" style={{
-            background: 'rgba(255,255,255,.1)', color: '#fff', border: '1px solid rgba(255,255,255,.2)',
-            fontSize: 15, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', gap: 8,
-          }}>
-            {'\u{25B6}\u{FE0F}'} Play Store
+        <div className="anim-up-3" style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap', marginTop: 24, alignItems: 'center' }}>
+          <a href={CONFIG.waze.playStoreUrl} {...externalLinkProps}>
+            <img src="/badge-googleplay.png" alt="Get it on Google Play" height={48} style={{ display: 'block' }} />
           </a>
-          <a href={CONFIG.waze.appStoreUrl} {...externalLinkProps} className="waze-btn" style={{
-            background: 'rgba(255,255,255,.1)', color: '#fff', border: '1px solid rgba(255,255,255,.2)',
-            fontSize: 15, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', gap: 8,
-          }}>
-            {'\u{1F34F}'} App Store
+          <a href={CONFIG.waze.appStoreUrl} {...externalLinkProps}>
+            <img src="/badge-appstore.svg" alt="Download on the App Store" height={48} style={{ display: 'block' }} />
           </a>
         </div>
 
