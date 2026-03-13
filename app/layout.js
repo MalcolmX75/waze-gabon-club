@@ -1,6 +1,9 @@
+import Script from 'next/script';
 import { LanguageProvider } from '@/lib/i18n';
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
 import './globals.css';
+
+const GA_ID = 'G-JF2ZSQBB3Y';
 
 export const metadata = {
   // === BASE ===
@@ -235,6 +238,18 @@ export default function RootLayout({ children }) {
           {children}
         </LanguageProvider>
         <ServiceWorkerRegister />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );
